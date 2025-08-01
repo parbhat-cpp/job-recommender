@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="{{ url_for('static', path='styles/index.css') }}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <main class="container">
+        <section id="output-container" class="recommendation">
+            
+        </section>
+        <div class="form-wrapper">
+            <div id="selected-file">
+
+            </div>
+            <form id="predict-form" class="predict-form">
+                <label for="resume" class="resume-label">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#878faf"
+                        class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z" />
+                    </svg>
+                </label>
+                <input id="resume" type="file" accept="application/pdf">
+                <div class="text-wrapper">
+                    <input id="text" type="text" placeholder="Tell us about you">
+                </div>
+                <button type="submit">
+                    Recommend
+                </button>
+            </form>
+        </div>
+    </main>
+    <script src="{{ url_for('static', path='scripts/index.js') }}"></script>
+</body>
+
+</html>
