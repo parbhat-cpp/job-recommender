@@ -6,6 +6,10 @@ python -c "
 import nltk
 import os
 
+nltk_data_path = '/tmp/nltk_data'
+os.makedirs(nltk_data_path, exist_ok=True)
+nltk.data.path.append(nltk_data_path)
+
 # Set the data path
 # Download with error handling
 packages = ['stopwords', 'punkt', 'wordnet', 'omw-1.4']
